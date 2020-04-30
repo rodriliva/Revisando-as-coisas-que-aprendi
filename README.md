@@ -1,4 +1,4 @@
-##Git##
+## Git
 
 **Iniciar o Git**
 ```
@@ -12,20 +12,52 @@ git add .
 ```
 git commit -m "Mensagem descrevendo o commit close #númeroPraFecharUmaIssue"
 ```
+**Adicionar e commitar todos os arquivos em um comando só**
+```
+git commit -am "message"
+```
 **Pushar os commits**
 ```
 git push *// Pushar os commits* 
 ```
-
+**Trazer as modificações do repositório para sua pasta local**
+```
 git pull
+```
+**Histórico do que foi feito no arquivo**
+```
 git log
+```
+**Status git do arquivo**
+```
 git status
+```
+**Histórico do que foi feito no arquivo com mais UI/UX**
+```
 git log --pretty=oneline
-git branch nomeDaBranch
-git checkout bug-123
-git checkout -b nomeDaBranch
-git checkout master
-git config color.ui true
-git commit -am "message"
+```
+**Histórico do arquivo em um gráfico**
+```
 git log --graph 
+```
+**Criar uma branch**
+```
+git branch nomeDaBranch
+```
+**Mudar para determinada branch**
+```
+git checkout nomeDaBranch
+```
+**Criar uma branch e já mudar para ela**
+```
+git checkout -b nomeDaBranch
+```
+**Mudar para a master**
+```
+git checkout master
+```
+**Fazer o terminal git ficar mais UI/UX**
+```
+git config color.ui true
+```
 
