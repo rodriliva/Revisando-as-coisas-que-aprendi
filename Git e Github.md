@@ -1,6 +1,5 @@
 ## Git
 
-### Comandos Básicos
 **Iniciar o Git**
 ```
 git init
@@ -29,10 +28,6 @@ git pull
 ```
 git log
 ```
-**Status git do arquivo**
-```
-git status
-```
 **Histórico do que foi feito no arquivo com mais UI/UX**
 ```
 git log --pretty=oneline
@@ -40,6 +35,10 @@ git log --pretty=oneline
 **Histórico do arquivo em um gráfico**
 ```
 git log --graph 
+```
+**Status git do arquivo**
+```
+git status
 ```
 **Criar uma branch**
 ```
