@@ -76,15 +76,15 @@ Itálico	*Texto em itálico*
 **Adicionar código**
 ```
 Alguns comandos Git básicos são:
-\```
+```
 git status
 git add
 git commit
-\```
+```
 ```
 **Links**
 ```
-\[Nome do Link](https://site.com/)
+[Nome do Link](https://site.com/)
 ```
 
 
