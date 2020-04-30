@@ -52,6 +52,10 @@ git checkout nomeDaBranch
 ```
 git checkout -b nomeDaBranch
 ```
+**Fazer merge da branch com o master**
+```
+git merge nomeDaBranch
+```
 **Mudar para a master**
 ```
 git checkout master
@@ -60,6 +64,7 @@ git checkout master
 ```
 git config color.ui true
 ```
+
 
 ## Github
 
@@ -76,11 +81,11 @@ Itálico	*Texto em itálico*
 **Adicionar código**
 ```
 Alguns comandos Git básicos são:
-```
+/```
 git status
 git add
 git commit
-```
+/```
 ```
 **Links**
 ```
