@@ -1,19 +1,10 @@
-# Revisão
-
-```
-git init // Iniciar o Git
-git add . // Adicionar os arquivos criados/modificados 
-git commit -m "Mensagem descrevendo o commit close #númeroPraFecharUmaIssue"
-git push // Pushar os commits 
-```
-
-##Ou 
+##Git
 
 **Iniciar o Git**
 ```
 git init
 ```
-**Adicionar os arquivos criados/modificados **
+**Adicionar os arquivos criados/modificados**
 ```
 git add .
 ```
@@ -21,7 +12,20 @@ git add .
 ```
 git commit -m "Mensagem descrevendo o commit close #númeroPraFecharUmaIssue"
 ```
-**Pushar os commits **
+**Pushar os commits**
 ```
 git push // Pushar os commits 
 ```
+
+git pull
+git log
+git status
+git log --pretty=oneline
+git branch bug-123
+git checkout bug-123
+git checkout -b bug-456
+git checkout master
+git config color.ui true
+git commit -am "message"
+
+
