@@ -61,3 +61,30 @@ git checkout master
 git config color.ui true
 ```
 
+## Github
+
+**Títulos**
+```
+# O título maior
+## O segundo maior título
+```
+**Texto**
+```
+Negrito	**Texto em negrito** 
+Itálico	*Texto em itálico* 	
+```
+**Adicionar código**
+```
+Alguns comandos Git básicos são:
+\```
+git status
+git add
+git commit
+\```
+```
+**Links**
+```
+\[Nome do Link](https://site.com/)
+```
+
+
