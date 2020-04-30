@@ -1,5 +1,6 @@
 ## Git
 
+### Comandos Básicos
 **Iniciar o Git**
 ```
 git init
@@ -18,7 +19,7 @@ git commit -am "message"
 ```
 **Pushar os commits**
 ```
-git push *// Pushar os commits* 
+git push
 ```
 **Trazer as modificações do repositório para sua pasta local**
 ```
