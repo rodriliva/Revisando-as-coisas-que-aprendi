@@ -1,6 +1,5 @@
-let x = 10
-let y = 10
 
+var cars = ["Saab", "Volvo", "BMW"]
+cars[0] = "Opel"
 
-
-console.log(x == y)
+console.log(cars.join(" "))
