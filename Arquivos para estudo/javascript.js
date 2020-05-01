@@ -1,5 +1,6 @@
 
-var cars = ["Saab", "Volvo", "BMW"]
-cars[0] = "Opel"
+var teste = ["Item1", "Item2", "Item3","Item4"]
 
-console.log(cars.join(" "))
+
+
+console.log(teste.slice(1,4))

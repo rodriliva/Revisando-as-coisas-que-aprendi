@@ -113,12 +113,6 @@ var person = {
 var arrayName = [item1, item2, ...]; 
 `` 
 
-**Colocando arrays em variaveis**
-
-``
-var cars = new Array("Saab", "Volvo", "BMW");
-``
-
 **Acessando valores de array pelo índice**
 
 ``
@@ -209,7 +203,7 @@ var myBoys = ["Emil", "Tobias", "Linus"];
 var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
 ```
 
-**Slicing an Array** Corta um pedaço de um array em outro array
+**slice()** Corta um pedaço de um array em outro array
 
 ```
 Esse exemplo slices out uma parte do array começando pelo elemento 1 ("Orange")
@@ -235,6 +229,197 @@ Example
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(2);
 ```
+
+**Organizando alfabéticamente**
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // Organiza alfabeticamente
+fruits.reverse();     // Organiza igual só que reversamente
+```
+
+**Metodo pra fazer um sort só que com números**
+```
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+```
+
+**Math.max() e Math.mim()**
+```
+Math.min()
+Achando o maior número do array:
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+Math.min()
+Achando o menor número do array:
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+```
+**Especifidades do método sort**
+
+```
+var cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+Even if objects have properties of different data types, the sort() method can be used to sort the array.
+
+The solution is to write a compare function to compare the property values:
+
+cars.sort(function(a, b){return a.year - b.year});
+
+Comparing string properties is a little more complex:
+
+Example
+cars.sort(function(a, b){
+  var x = a.type.toLowerCase();
+  var y = b.type.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+});
+```
+
+**Array.forEach()** Chama uma função pra cada elemento do array
+
+```
+var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt = txt + value + "<br>";
+}
+```
+
+**Array.map()** cria um novo array perfomando uma função em cada elemento do array
+```
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+ou
+
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+
+function myFunction(value) {
+  return value * 2;
+}
+```
+
+**Array.filter()** Cria um novo array que passa pelo filtro de uma função teste
+```
+var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+
+var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+```
+
+**Array.reduce()** Executa uma função pra produzir ou reduzir um array pra um valor único
+```
+var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+ou 
+
+var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+```
+
+**Array.every()**
+Checa se todos os valores de terminado array passam no teste
+```
+This example check if all array values are larger than 18:
+
+Example
+var numbers = [45, 4, 9, 16, 25];
+var allOver18 = numbers.every(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+ ou 
+ 
+var numbers = [45, 4, 9, 16, 25];
+var allOver18 = numbers.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+```
+
+**Array.some()**
+checa se os valores de determinado array passam por uma função teste 
+```
+This example check if some array values are larger than 18:
+
+Example
+var numbers = [45, 4, 9, 16, 25];
+var someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+```
+
+**Array.indexOf()** Procura no array por um elemento que tenha o valor e returna sua posição
+```
+Procura pelo item  "Apple":
+
+var fruits = ["Apple", "Orange", "Apple", "Mango"];
+var a = fruits.indexOf("Apple");
+
+Se aparece mais de uma vez retorna a primeira vez que aparece
+
+```
+
+**Array.find()** retorna o valor do primeiro elemento do array que passa por uma função teste
+
+```
+Exemplo que retorna o primeiro valor maior que 18
+
+var numbers = [4, 9, 16, 25, 29];
+var first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+Note que a função tem 3 atributos
+
+O item valor
+O item index
+O Array
+```
+
+
+
 
 
 ## Metódos
