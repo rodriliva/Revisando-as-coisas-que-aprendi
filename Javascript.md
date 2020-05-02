@@ -243,22 +243,19 @@ var points = [40, 100, 1, 5, 25, 10];
 points.sort(function(a, b){return a - b});
 ```
 
-**Math.max() e Math.mim()**
+**Math.max() e Math.min()**
 ```
 Math.min()
 Achando o maior número do array:
 
-function myArrayMax(arr) {
-  return Math.max.apply(null, arr);
-}
+Math.max.apply(Math, nomeDoArray) 
 
 Math.min()
 Achando o menor número do array:
 
-function myArrayMin(arr) {
-  return Math.min.apply(null, arr);
-}
+Math.min.apply(Math, nomeDoArray) 
 ```
+
 **Especifidades do método sort**
 
 ```
