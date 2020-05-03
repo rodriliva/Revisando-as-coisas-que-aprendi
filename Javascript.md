@@ -434,19 +434,201 @@ x.toFixed(6);           // retorna 9.656000
 
 ```
 var x = 9.656;
-x.toPrecision();        // returns 9.656
-x.toPrecision(2);       // returns 9.7
-x.toPrecision(4);       // returns 9.656
-x.toPrecision(6);       // returns 9.65600
+x.toPrecision();        // retorna 9.656
+x.toPrecision(2);       // retorna 9.7
+x.toPrecision(4);       // retorna 9.656
+x.toPrecision(6);       // retorna 9.65600
 ```
 **parseInt()**
 Retorna o número inteiro
 
 ```
-parseInt("10");         // returns 10
-parseInt("10.33");      // returns 10
-parseInt("10 20 30");   // returns 10
-parseInt("10 years");   // returns 10
-parseInt("years 10");   // returns NaN
+parseInt("10");         // retorna 10
+parseInt("10.33");      // retorna 10
+parseInt("10 20 30");   // retorna 10
+parseInt("10 years");   // retorna 10
+parseInt("years 10");   // retorna NaN
 ```
+
+## Math
+**PI**
+
+``
+Math.PI;            // retorna 3.141592653589793
+``
+
+**Potência**
+
+``
+Math.pow(8, 2);      // retorna 64
+``
+
+**Raiz quadrada**
+
+``
+Math.sqrt(64);      // retorna 8
+``
+
+**Valor positivo**
+
+``
+Math.abs(-4.7);     // retorna 4.7
+``
+
+**Arredonda pra cima**
+
+``
+Math.ceil(4.4);     // retorna 5
+``
+
+**Arredonda pra baixo**
+
+``
+Math.floor(4.7);    // retorna 4
+``
+
+**Arredondar pro valor inteiro mais próximo**
+
+```
+Math.round(4.7);    // retorna 5
+Math.round(4.4);    // retorna 4
+```
+
+**Minimo e Máximo**
+```
+Math.min(0, 150, 30, 20, -8, -200);  // retorna -200
+Math.max(0, 150, 30, 20, -8, -200);  // retorna 150
+```
+
+**Número Aleatório**
+
+``
+Math.random();     // retorna um número aleatório entre 0 e 1
+``
+
+
+
+
+## Datas
+**Nova data**
+
+``
+var d = new Date()
+``
+
+**Métodos de data**
+```
+getFullYear()	Get the year as a four digit number (yyyy)
+getMonth()	Get the month as a number (0-11)
+getDate()	Get the day as a number (1-31)
+getHours()	Get the hour (0-23)
+getMinutes()	Get the minute (0-59)
+getSeconds()	Get the second (0-59)
+getMilliseconds()	Get the millisecond (0-999)
+getTime()	Get the time (milliseconds since January 1, 1970)
+getDay()	Get the weekday as a number (0-6)
+Date.now()	Get the time. ECMAScript 5.
+```
+
+## Condicionais
+
+**if** 
+Especificar um block de código pra ser executado se a condição especificada é true
+```
+if (hour < 18) {
+  greeting = "Good day";
+}
+```
+
+**else** 
+Especificar um block de código pra ser executado se a condição especificada é false
+```
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+```
+
+**else if** 
+Especificar uma nova condição se a primeira deu false
+```
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+```
+**switch** 
+Varias alternativas pra o código ser executado
+```
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+```
+
+## Loops
+
+**for** loops dentro de um código um número de vezes
+```
+for (i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+```
+**for/in** - loops dentro de uma propriedade de objeto
+```
+var person = {fname:"John", lname:"Doe", age:25};
+
+var text = "";
+var x;
+for (x in person) {
+  text += person[x];
+}
+```
+**for/of** - loops dentro de um valor de um objeto
+```
+var cars = ['BMW', 'Volvo', 'Mini'];
+var x;
+
+for (x of cars) {
+  document.write(x + "<br >");
+}
+```
+**while** - loops dentro de um código enquanto a condição for true
+```
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+```
+**do/while** - Tambem loops dentro de um código enquanto a condição for true
+```
+do {
+  text += "The number is " + i;
+  i++;
+}
+while (i < 10);
+```
+
 
