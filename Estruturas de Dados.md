@@ -206,6 +206,12 @@ ll.size()
 ll.getHead()
 ```
 
+## Doubly Linked Lists
+## Set
+## Dictionary
+## Hashes
+## Tree
+
 
 
 

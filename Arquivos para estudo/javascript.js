@@ -1,20 +1,116 @@
-let nomes = ['Rodrigo', 'Giovanni', 'Larissa', 'Eduardo', 'Bianca']
-let nomes2 = new Array('Flávio', 'Paulo', 'Jair', 'Regina')
+function Set() {
+    var items = {}
 
-nomes[0] = 'Sérgio' // Tubstitui o index do elemento
-// let nomes = ['Sérgio', 'Giovanni', 'Larissa', 'Eduardo', 'Bianca']
+    this.add = function(value) {
+        if(!this.has(value)) {
+            items[value] = value
+            return true
+        }
+        return false
+    }
 
-nomes.push('Fernando') // Coloca um elemento coloca no final
-// let nomes = ['Rodrigo', 'Giovanni', 'Larissa', 'Eduardo', 'Bianca', 'Fernando']
+    this.delete = function(value) {
+        if(this.has(value)) {
+            delete items[value]
+            return true
+        }
+        return false
+    }
 
-nomes.unshift('Fernando') //Coloca um elemento no começo
-// let nomes = ['Fernando', 'Giovanni', 'Larissa', 'Eduardo',]
+    this.has = function(value) {
+        return items.hasOwnProperty(value)
+    }
 
-nomes.pop() //Tira um elemento do final do array
-// let nomes = ['Rodrigo', 'Giovanni', 'Larissa', 'Eduardo',]
+    this.clear = function() {
+        items = {}
+    }
 
-nomes.shift() //Tira um elemento do começo 
-// let nomes = ['Giovanni', 'Larissa', 'Eduardo',]
+    this.size = function() {
+        return Object.keys(items).length
+    }
+
+    this.values = function() {
+        var values = [],
+        keys = Object.keys(items)
+        for(var i = 0; i < keys.length; i++) {
+            values.push(items[keys[i]])
+        }
+        return values
+    }
+
+    this.union = function(otherSet) {
+        var unionSet = new Set(),
+        values = this.values()
+
+        for(var i = 0; i < values.length; i++) {
+            unionSet.add(values[i])
+        }
+
+        values = otherSet.values()
+
+        for(var i = 0; i < values.length; i++) {
+            unionSet.add(values[i])
+        }
+
+        return unionSet
+    }
+
+    this.intersection = function(otherSet) {
+        var intersectionSet = new Set(),
+        values = this.values()
+
+        for(var i = 0; i < values.length; i++) {
+            if(otherSet.has(values[i])) {
+                intersectionSet.add(values[i])
+            }
+        }
+        return intersectionSet
+    }
+
+    this.difference = function(otherSet) {
+        var differenceSet = new Set(),
+        values = this.values()
+
+        for(var i = 0; i < values.length; i++) {
+            if(!otherSet.has(values[i])) {
+                differenceSet.add(values[i])
+            }
+        }
+        return differenceSet
+    }
+
+    this.subset = function(otherSet) {
+        if(this.size() > otherSet.size()) {
+            return false
+        } else {
+            var values = this.values()
+
+            for(var i = 0; i < values.length; i++) {
+                if(!otherSet.has(values[i])) {
+                    return false
+                }
+            }
+            return true
+        }
+    }
+}
+
+//Cria o conjunto
+var set = new Set 
+
+//Adiciona 
+set.add(1)
 
 
+//Remove
+set.delete(12)
 
+//Checa o tamanho
+set.size()
+
+//Retorna o Array
+set.values()
+
+
+console.log(set.size())
+console.log(set.values())
